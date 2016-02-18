@@ -4,7 +4,19 @@
   </head>
 
   <body>
-    aloha!
+    <div>
+      <h1><a href="/">Django Blog</a></h1>
+    </div>
+
+    <p>aloha!</p>
+
+    {% for post in posts %}
+    <div>
+      <p> published in : {{ post.published_date }}</p>
+      <h2><a href=""> {{ post.title }} </a></h2>
+      <p> {{ post.text | linebreaks }} </p>
+    </div>
+    {% endfor %}
   </body>
 
-  </html>
+</html>
